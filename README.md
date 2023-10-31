@@ -15,3 +15,16 @@ Steps to deploy Jenkis in Kubernetes:
     kubectl get deployments -n devops-tools
 6) Get the deployment details
     kubectl describe deployments --namespace=devops-tools
+
+
+How to get the access Pasword for Jnekis??
+1)  kubectl get pods --namespace=devops-tools
+2)  kubectl logs <node-name> --namespace=devops-tools
+
+or
+
+1) kubectl exec -it <node-name> cat /var/jenkins_home/secrets/initialAdminPassword -n devops-tools
+
+
+Improvements::
+1) search the node name automatically
